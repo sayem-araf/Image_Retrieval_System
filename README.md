@@ -31,14 +31,17 @@ pip install pandas numpy ollama gradio
 Place your JPG images in the `frames/` folder (one level up from this directory):
 ```
 Image_Retrieval_System/
-├── frames/               # Put your images here
+├── frames/                      # Put your images here
 │   ├── bear.jpg
 │   ├── bird.jpg
 │   └── ...
-└── Image_Retrieval_System/
-    ├── pipeline.py
-    ├── app.py
-    └── ...
+└── Image_Retrieval_System/      # Project files
+    ├── app.py                   # Web interface (Gradio)
+    ├── final_search.py          # Command-line search
+    ├── pipeline.py              # Image indexing script
+    ├── Image_Retrieval_System.ipynb  # Jupyter notebook
+    ├── model.pkl                # Vector database (created after indexing)
+    └── README.md                # This file
 ```
 
 ### 3. Index Your Images
