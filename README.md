@@ -1,8 +1,8 @@
-# 🖼️ AI Image Retrieval System
+# AI Image Retrieval System
 
 Search images using natural language queries powered by AI vision and vector embeddings.
 
-## 📖 Overview
+## Overview
 
 This system transforms images into searchable data using:
 - **Ministral-3:3b** (Vision AI) - Generates text descriptions from images
@@ -11,7 +11,7 @@ This system transforms images into searchable data using:
 
 **Example:** Search for "bear in forest" → System finds all images with bears, wildlife, or natural scenes.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Requirements
 
@@ -79,8 +79,8 @@ Features:
 
 **Example session:**
 ```
-✅ DATABASE LOADED: 10 images indexed.
-📍 VECTOR DIMENSIONS: 768 (Gemma Standard)
+DATABASE LOADED: 10 images indexed.
+VECTOR DIMENSIONS: 768 (Gemma Standard)
 
 Enter search term: wildlife in nature
 
@@ -102,7 +102,7 @@ Features:
 - Real-time confidence scoring
 - No need to type file paths
 
-## 📁 Project Structure
+## Project Structure
 
 | File | Purpose | Details |
 |------|---------|---------|
@@ -112,7 +112,7 @@ Features:
 | `model.pkl` | Vector database | Pandas DataFrame: [filename, description, 768-dim embedding] |
 | `Image_Retrieval_System.ipynb` | Jupyter notebook | Step-by-step walkthrough of the entire pipeline |
 
-## 🔧 How It Works
+## How It Works
 
 ### Pipeline Flow
 ```
@@ -164,7 +164,7 @@ def cos_sim(a, b):
 - 0.5 = somewhat related
 - 0.0 = completely unrelated
 
-## 🔄 Updating Your Database
+## Updating Your Database
 
 ### Add New Images
 ```bash
@@ -183,7 +183,7 @@ python pipeline.py
 ### Check What's Indexed
 Run `final_search.py` - it displays vector info on startup, or check the Database Explorer tab in `app.py`
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 | Problem | Cause | Solution |
 |---------|-------|----------|
@@ -194,7 +194,7 @@ Run `final_search.py` - it displays vector info on startup, or check the Databas
 | **Poor search results** | Bad embeddings or descriptions | Check vector info in `final_search.py` output |
 | **Search returns nothing** | Query too specific | Try broader terms like "animal" instead of "brown bear" |
 
-## 💡 Tips for Best Results
+## Tips for Best Results
 
 **Search Query Tips:**
 - Use descriptive terms: `"wildlife in nature"` not `"pic1"`
@@ -206,7 +206,7 @@ Run `final_search.py` - it displays vector info on startup, or check the Databas
 - Consistent naming helps organization
 - Re-index if you update many images
 
-## 📊 Technical Specifications
+## Technical Specifications
 
 - **Vector Dimensions:** 768 (EmbeddingGemma standard)
 - **Image Format:** JPG only
@@ -215,7 +215,7 @@ Run `final_search.py` - it displays vector info on startup, or check the Databas
 - **Database Format:** Pickle (pandas DataFrame)
 - **Storage:** ~6KB per indexed image (description + embedding)
 
-## 🎯 Example Use Cases
+## Example Use Cases
 
 1. **Photo Library:** Search `"family gathering"` across thousands of photos
 2. **Wildlife Research:** Find `"endangered species"` in camera trap images
